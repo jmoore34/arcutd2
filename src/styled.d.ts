@@ -6,6 +6,7 @@ declare module 'styled-components' {
         typography: {
             fonts: {
                 title: string
+                body: string
             },
             sizes: {
                 h1: string

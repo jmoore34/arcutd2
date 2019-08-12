@@ -4,6 +4,7 @@ export const theme: DefaultTheme = {
     typography: {
         fonts: {
             title: "sans-serif",
+            body: "sans-serif"
         },
         sizes: {
             h1: "32px",
