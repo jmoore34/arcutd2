@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {Section} from '../components/Section'
 import styled from 'styled-components'
-import {Button} from '../components/Button'
+import {Button, ButtonGroup} from '../components/Button'
 import cow from './img/cow.webp'
 
 const Heading = styled.h1`
@@ -67,7 +67,11 @@ export const Hero: React.FunctionComponent = (props) => <MainDiv>
     <MainHeading>Animal Rights Club</MainHeading>
     <SubHeading>at UT Dallas</SubHeading>
     <Space />
-    <Button>Learn more</Button>
+    <ButtonGroup>
+        <Button>Learn more</Button>
+        <Button>Get involved</Button>
+    </ButtonGroup>
+
 </MainDiv>;
 
 

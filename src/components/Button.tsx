@@ -26,3 +26,8 @@ export const Button =  styled.div<{color?: string}>`
   }
   transition: all 0.2s;
 `;
+
+export const ButtonGroup = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
