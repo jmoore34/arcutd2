@@ -3,12 +3,13 @@ import {DefaultTheme} from 'styled-components'
 export const theme: DefaultTheme = {
     typography: {
         fonts: {
-            title: "sans-serif",
-            body: "sans-serif"
+            title: '"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+            body: '"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif'
         },
         sizes: {
             h1: "32px",
-            h2: "16px",
+            h2: "20px",
+            body: "16px"
         }
     },
     color: {

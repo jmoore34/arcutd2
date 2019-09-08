@@ -11,6 +11,7 @@ declare module 'styled-components' {
             sizes: {
                 h1: string
                 h2: string
+                body: string
             }
         }
         color: {
