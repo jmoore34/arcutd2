@@ -24,5 +24,16 @@ export const About: React.FunctionComponent = (props) => <MainDiv>
             facilitates carpooling to external volunteer events in the DFW area.
         </Paragraph>
     </Section>
+    <Section>
+        <H2>Event Calendar</H2>
+        <EventList />
+    </Section>
+    <Section>
+        <H2>How to Join</H2>
+        <ol>
+            <LI><b>(Required)</b> Fill out our <A href="https://dfwanimalrights.typeform.com/to/D23B46" target="_blank">Member Information Form</A></LI>
+            <LI><b>(Recommended)</b> Join our <A href="https://discord.gg/eMkfQud" target="_blank">Discord server</A> and/or our <A href="https://www.facebook.com/groups/arcutd/" target="_blank">Facebook group</A></LI>
+        </ol>
+    </Section>
 </MainDiv>;
 
