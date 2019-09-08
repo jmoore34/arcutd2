@@ -6,8 +6,5 @@ interface SectionProps {
 
 export const Section = styled.div<SectionProps>`
     background-color: ${(props) => props.odd ? props.theme.color.bg.primary : props.theme.color.bg.secondary};
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 60px 300px;
 `;

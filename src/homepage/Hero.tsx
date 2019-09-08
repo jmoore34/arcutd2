@@ -56,7 +56,7 @@ const MainDiv = styled.div`
 
 const Space = styled.div`
   display: block;
-  height: 60px;
+  height: 75px;
   width: 100%;
 `;
 

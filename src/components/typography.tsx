@@ -13,5 +13,5 @@ export const H2 = styled.h2`
 
 export const Paragraph = styled.p`
   font-family: ${(props) => props.theme.typography.fonts.body};
-  font-size: 14px;
+  font-size: 16px;
 `;
