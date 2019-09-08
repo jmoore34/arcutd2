@@ -66,11 +66,6 @@ export const Hero: React.FunctionComponent = (props) => <MainDiv>
 
     <MainHeading>Animal Rights Club</MainHeading>
     <SubHeading>at UT Dallas</SubHeading>
-    <Space />
-    <ButtonGroup>
-        <Button>Learn more</Button>
-        <Button>Get involved</Button>
-    </ButtonGroup>
 
 </MainDiv>;
 
