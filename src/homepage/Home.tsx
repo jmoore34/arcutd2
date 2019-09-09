@@ -7,13 +7,14 @@ import {About} from "./About";
 const Row = styled.div`
   display: flex;
   @media(${props=>props.theme.mediaQueries.horizontalLayout}) {
-    flex-direction: row; 
+    flex-direction: row;
+    min-height: 100vh;
+    justify-content: stretch; 
   }
   @media(${props=>props.theme.mediaQueries.verticalLayout}) { // Stretch to full width on smaller devices
     flex-direction: column; 
   }
-  min-height: 100vh;
-  justify-content: stretch;
+
   margin: 0;
   padding: 0;
 `;

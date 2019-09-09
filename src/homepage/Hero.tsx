@@ -46,7 +46,7 @@ const MainDiv = styled.div`
     flex: 1 1 50vw;
   }
   @media(${props=>props.theme.mediaQueries.verticalLayout}) { // Stretch to full width on smaller devices
-    flex: 1 0 100vw;
+    flex: 1 1 70vh;
     //min-height: 70vh;
   }
   display: flex;
