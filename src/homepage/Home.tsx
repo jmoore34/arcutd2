@@ -7,7 +7,11 @@ import {About} from "./About";
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  @media(${props=>props.theme.mediaQueries.verticalLayout}) { // Stretch to full width on smaller devices
+    flex-direction: column; 
+  }
+  min-height: 100vh;
+  justify-content: stretch;
   margin: 0;
   padding: 0;
 `;

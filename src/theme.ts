@@ -17,5 +17,8 @@ export const theme: DefaultTheme = {
             primary: "#ffffff",
             secondary: "#ccffd8"
         }
+    },
+    mediaQueries: {
+        verticalLayout: "orientation: portrait"
     }
 };

@@ -19,6 +19,9 @@ declare module 'styled-components' {
                 primary: string
                 secondary: string
             }
+        },
+        mediaQueries: {
+            verticalLayout: string
         }
     }
 }

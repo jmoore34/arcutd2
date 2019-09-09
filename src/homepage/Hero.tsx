@@ -43,7 +43,10 @@ const BackgroundGradient = styled.div`
 
 const MainDiv = styled.div`
   flex: 1 1 50vw;
-  height: 100vh;
+  @media(${props => props.theme.mediaQueries.verticalLayout}) { // Stretch to full width on smaller devices
+    flex: 1 0 100vw;
+    min-height: 70vh;
+  }
   display: flex;
   flex-direction: column;
   justify-content: center;

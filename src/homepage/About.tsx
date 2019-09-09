@@ -2,9 +2,13 @@ import {A, H1, H2, LI, Paragraph} from '../components/typography';
 import * as React from "react";
 import styled from "styled-components";
 import {EventList} from "./EventList";
+import {theme} from "../theme";
 
 const MainDiv = styled.div`
   flex: 1 1 50vw;
+  @media(${props=>props.theme.mediaQueries.verticalLayout}) { // Stretch to full width on smaller devices
+    flex: 1 0 100vw;
+  }
   //height: 100vh;
   display: flex;
   flex-direction: column;
