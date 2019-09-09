@@ -2,7 +2,7 @@ import * as React from 'react'
 import {Section} from '../components/Section'
 import styled from 'styled-components'
 import {Button, ButtonGroup} from '../components/Button'
-import cow from './img/cow.webp'
+import cow from './img/cow.jpg'
 
 const Heading = styled.h1`
   font-family: ${props => props.theme.typography.fonts.title};
