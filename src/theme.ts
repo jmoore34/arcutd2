@@ -19,6 +19,7 @@ export const theme: DefaultTheme = {
         }
     },
     mediaQueries: {
-        verticalLayout: "orientation: portrait"
+        verticalLayout: "orientation: portrait",
+        horizontalLayout: "orientation: landscape"
     }
 };

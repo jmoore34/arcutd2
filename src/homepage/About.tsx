@@ -5,7 +5,9 @@ import {EventList} from "./EventList";
 import {theme} from "../theme";
 
 const MainDiv = styled.div`
-  flex: 1 1 50vw;
+  @media(${props=>props.theme.mediaQueries.horizontalLayout}) { // Stretch to full width on smaller devices
+    flex: 1 1 50vw;
+  }
   @media(${props=>props.theme.mediaQueries.verticalLayout}) { // Stretch to full width on smaller devices
     flex: 1 0 100vw;
   }

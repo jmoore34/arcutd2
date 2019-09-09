@@ -6,7 +6,9 @@ import {About} from "./About";
 
 const Row = styled.div`
   display: flex;
-  flex-direction: row;
+  @media(${props=>props.theme.mediaQueries.horizontalLayout}) {
+    flex-direction: row; 
+  }
   @media(${props=>props.theme.mediaQueries.verticalLayout}) { // Stretch to full width on smaller devices
     flex-direction: column; 
   }

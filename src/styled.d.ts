@@ -22,6 +22,7 @@ declare module 'styled-components' {
         },
         mediaQueries: {
             verticalLayout: string
+            horizontalLayout: string
         }
     }
 }
