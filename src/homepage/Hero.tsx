@@ -26,8 +26,6 @@ const BackgroundImage = styled.div`
   background-image: url(${cow});
   background-size: cover;
   background-position: top;
-  width: 100%;
-  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -37,8 +35,6 @@ const BackgroundImage = styled.div`
 const BackgroundGradient = styled.div`
   z-index: -1;
   background: linear-gradient(to bottom, rgba(9, 71, 14, 0.45), rgba(9, 71, 14, 0.97));
-  width: 100%;
-  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -46,12 +42,14 @@ const BackgroundGradient = styled.div`
 `;
 
 const MainDiv = styled.div`
-  width: 100vw;
+  flex: 1 1 50vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  background: linear-gradient(to bottom, rgba(9, 71, 14, 0.45), rgba(9, 71, 14, 0.97)), url(${cow}) top;
 `;
 
 const Space = styled.div`
@@ -61,8 +59,6 @@ const Space = styled.div`
 `;
 
 export const Hero: React.FunctionComponent = (props) => <MainDiv>
-    <BackgroundImage />
-    <BackgroundGradient />
 
     <MainHeading>Animal Rights Club</MainHeading>
     <SubHeading>at UT Dallas</SubHeading>

@@ -1,15 +1,17 @@
-import {H1, H2, Paragraph} from '../components/typography';
+import {A, H1, H2, LI, Paragraph} from '../components/typography';
 import * as React from "react";
 import styled from "styled-components";
+import {EventList} from "./EventList";
 
 const MainDiv = styled.div`
-  flex: 1 0 auto;
+  flex: 1 1 50vw;
   //height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px;
-  margin: 40px 50px;
+  padding: 50px 40px;
+  margin: 0; 
+  background: #86cb79 linear-gradient(44deg, #86cb97, #a5dc86);
 `;
 
 const Section = styled.div``;
@@ -19,9 +21,7 @@ export const About: React.FunctionComponent = (props) => <MainDiv>
         <H1>About us</H1>
         <Paragraph>The Animal Rights Club at UT Dallas is a student organization committed to providing education about
             animal rights issues, volunteering on and off campus, and building a sense of community for those who care
-            about animals. General meetings are typically held every other Wednesday at 7PM in RHS. We also host a number
-            of internal events ranging from film screenings to cooking socials to VR outreach tabling. Moreover, the club
-            facilitates carpooling to external volunteer events in the DFW area.
+            about animals.
         </Paragraph>
     </Section>
     <Section>
