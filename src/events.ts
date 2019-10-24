@@ -16,6 +16,7 @@ export const events: Event[] = [
     {date: mdyDate(9,25,2019), time: "7PM", location: "RHS 1.001", name: "Movie Night", description: ""},
     {date: mdyDate(10,9,2019), time: "7PM", location: "RHS 1.001", name: "Vegan Baking Social", description: ""},
     {date: mdyDate(10,23,2019), time: "7PM", location: "RHS 1.001", name: "Homecoming Parade Poster Making", description: ""},
+    {date: mdyDate(10,30,2019), time: "8PM", location: "FO 1.202", name: "Scary Movie Night", description: "Come for a free screening of Dominion! Win $5 if you can make it through! Free treats from Reverie Bakeshop"},
     {date: mdyDate(11,6,2019), time: "7PM", location: "RHS 1.001", name: "Activist Letter Writing", description: ""},
     {date: mdyDate(11,20,2019), time: "7PM", location: "RHS 1.001", name: "Vegan Thanksgiving Potluck", description: ""},
 ];
