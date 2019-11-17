@@ -5,7 +5,7 @@ import {EventList} from "./EventList";
 import {theme} from "../theme";
 import {returnStatement} from "@babel/types";
 import {string} from "prop-types";
-import {ExpansionPanel} from "@material-ui/core";
+import {ExpansionPanel, Link} from "@material-ui/core";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import Typography from "@material-ui/core/Typography";
@@ -173,25 +173,35 @@ export const About: React.FunctionComponent = (props) => {
                     <Typography variant="h4">Social Media</Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
-                    <H2>How to Join</H2>
-                    <ol>
-                        <LI>
-                            <b>(Required)</b> Fill out our
-                            <A href="https://dfwanimalrights.typeform.com/to/D23B46"
-                               target="_blank">Member Information Form</A></LI>
-                        <LI>
-                            <b>(Recommended)</b> Join our
-                            <A href="https://discord.gg/eMkfQud" target="_blank">
-                                Discord
-                                server
-                            </A>
-                            and/or our
-                            <A href="https://www.facebook.com/groups/arcutd/" target="_blank">
-                                Facebook group
-                            </A>
-                        </LI>
+                    <div>
+                        <Typography variant="h5">Join the conversation!</Typography>
+                        <ul>
+                            <LI>
+                                <Link href="https://discord.gg/eMkfQud" target="_blank">
+                                    Discord server
+                                </Link>
+                            </LI>
+                            <LI>
+                                <Link href="https://www.facebook.com/groups/arcutd/" target="_blank">
+                                    Facebook group
+                                </Link>
+                            </LI>
+                        </ul>
+                        <Typography variant="h5">Follow us!</Typography>
+                        <ul>
+                            <LI>
+                                <Link href="https://www.facebook.com/animalrightsclubutd/" target="_blank">
+                                    FB @arcutdallas
+                                </Link>
+                            </LI>
+                            <LI>
+                                <Link href="https://www.instagram.com/arcutd/" target="_blank">
+                                    IG @arcutd
+                                </Link>
+                            </LI>
+                        </ul>
+                    </div>
 
-                    </ol>
                 </ExpansionPanelDetails>
             </ExpansionPanel>
             <ExpansionPanel expanded={currentPanel === 'calendar'} onChange={handleChange('calendar')}>
