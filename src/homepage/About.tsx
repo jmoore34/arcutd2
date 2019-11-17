@@ -12,6 +12,7 @@ import Typography from "@material-ui/core/Typography";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 // @ts-ignore
 import {ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
+import TextField from "@material-ui/core/TextField";
 
 const MainDiv = styled.div`
   @media(${props => props.theme.mediaQueries.horizontalLayout}) { // Stretch to full width on smaller devices
@@ -56,6 +57,8 @@ export const About: React.FunctionComponent = (props) => {
         setCurrentPanel(isExpanded ? panel : "");
     };
 
+    const onSubmit = () => {};
+
     const [firstName, setFirstName] = React.useState<string>("");
     const [lastName, setLastName] = React.useState<string>("");
     const [netID, setNetID] = React.useState<string>("");
@@ -70,32 +73,47 @@ export const About: React.FunctionComponent = (props) => {
                     <Typography variant="h4">Member Info Form</Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
-                    <ValidatorForm>
+                    <ValidatorForm onSubmit={onSubmit}>
                         <VerticalForm>
                             <HorizontalFieldGroup>
                                 <TextValidator
+                                    required
+                                    validators={['required']}
+                                    errorMessages={['This field is required']}
                                     label="First Name"
                                     value={firstName}
                                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => setFirstName(event.target.value)}
                                 />
                                 <TextValidator
+                                    required
                                     label="Last Name"
+                                    validators={['required']}
+                                    errorMessages={['This field is required']}
                                     value={lastName}
                                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => setLastName(event.target.value)}
                                 />
                             </HorizontalFieldGroup>
                             <TextValidator
                                 label="Net ID"
+                                required
+                                validators={['required',`matchRegexp:^[A-Za-z]{3}[0-9]{6}$`]}
+                                errorMessages={['This field is required',"Net ID must be in the form abc123456"]}
                                 value={netID}
                                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setNetID(event.target.value)}
                             />
                             <TextValidator
                                 label="Preferred Email"
+                                required
+                                validators={['required',"isEmail"]}
+                                errorMessages={['This field is required',"Must be a valid email address"]}
                                 value={email}
                                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
                             />
                             <TextValidator
                                 label="Phone Number"
+                                required
+                                validators={['required','isNumber']}
+                                errorMessages={['This field is required',"Must be a valid phone number"]}
                                 value={phoneNumber}
                                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setPhoneNumber(event.target.value)}
                             />
