@@ -13,6 +13,7 @@ import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 // @ts-ignore
 import {ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 const MainDiv = styled.div`
   @media(${props => props.theme.mediaQueries.horizontalLayout}) { // Stretch to full width on smaller devices
@@ -46,6 +47,11 @@ const HorizontalFieldGroup = styled.div`
 const Space = styled.div`
   flex: 5px 0 0;
 `;
+
+const LargeSpace = styled.div`
+  flex: 15px 0 0;
+`;
+
 
 
 export const About: React.FunctionComponent = (props) => {
@@ -127,6 +133,8 @@ export const About: React.FunctionComponent = (props) => {
                                 value={phoneNumber}
                                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setPhoneNumber(event.target.value)}
                             />
+                            <LargeSpace />
+                            <Button variant="contained" type="submit" color="primary">Submit</Button>
                         </VerticalForm>
                     </ValidatorForm>
                 </ExpansionPanelDetails>
