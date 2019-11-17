@@ -40,7 +40,11 @@ const HorizontalFieldGroup = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  & * {margin-right: 10px;}
+  width: 102%; // Allows two fields and spacer to fit
+`;
+
+const Space = styled.div`
+  flex: 5px 0 0;
 `;
 
 
@@ -65,7 +69,7 @@ export const About: React.FunctionComponent = (props) => {
     const [email, setEmail] = React.useState<string>("");
     const [phoneNumber, setPhoneNumber] = React.useState<string>("");
 
-
+    const inputProps = {margin: "normal"};
     return (
         <MainDiv>
             <ExpansionPanel expanded={currentPanel === 'infoform'} onChange={handleChange('infoform')}>
@@ -77,6 +81,7 @@ export const About: React.FunctionComponent = (props) => {
                         <VerticalForm>
                             <HorizontalFieldGroup>
                                 <TextValidator
+                                    {...inputProps}
                                     required
                                     validators={['required']}
                                     errorMessages={['This field is required']}
@@ -84,7 +89,9 @@ export const About: React.FunctionComponent = (props) => {
                                     value={firstName}
                                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => setFirstName(event.target.value)}
                                 />
+                                <Space />
                                 <TextValidator
+                                    {...inputProps}
                                     required
                                     label="Last Name"
                                     validators={['required']}
@@ -94,6 +101,7 @@ export const About: React.FunctionComponent = (props) => {
                                 />
                             </HorizontalFieldGroup>
                             <TextValidator
+                                {...inputProps}
                                 label="Net ID"
                                 required
                                 validators={['required',`matchRegexp:^[A-Za-z]{3}[0-9]{6}$`]}
@@ -102,6 +110,7 @@ export const About: React.FunctionComponent = (props) => {
                                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setNetID(event.target.value)}
                             />
                             <TextValidator
+                                {...inputProps}
                                 label="Preferred Email"
                                 required
                                 validators={['required',"isEmail"]}
@@ -110,6 +119,7 @@ export const About: React.FunctionComponent = (props) => {
                                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
                             />
                             <TextValidator
+                                {...inputProps}
                                 label="Phone Number"
                                 required
                                 validators={['required','isNumber']}
