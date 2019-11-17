@@ -90,12 +90,10 @@ export const About: React.FunctionComponent = (props) => {
                     <Typography variant="h4">About Us</Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
-                    <Paragraph>The Animal Rights Club at UT Dallas is a student organization committed to providing
-                        education about
-                        animal rights issues, volunteering on and off campus, and building a sense of community for
-                        those
-                        who care
-                        about animals.
+                    <Paragraph>
+                        The Animal Rights Club at UT Dallas is a student organization committed to providing education
+                        about animal rights issues, volunteering on and off campus, and building a sense of community
+                        for those who care about animals.
                     </Paragraph>
                 </ExpansionPanelDetails>
             </ExpansionPanel>
