@@ -52,7 +52,11 @@ const LargeSpace = styled.div`
   flex: 15px 0 0;
 `;
 
-
+const encode = (data: any) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+}
 
 export const About: React.FunctionComponent = (props) => {
     const [currentPanel, setCurrentPanel] = React.useState<string>("infoform");
@@ -67,13 +71,38 @@ export const About: React.FunctionComponent = (props) => {
         setCurrentPanel(isExpanded ? panel : "");
     };
 
-    const onSubmit = () => {};
+    const onSubmit = () => {
+        const body = encode({
+            "form-name": "memberinfo",
+            firstName,
+            lastName,
+            netID,
+            email,
+            phoneNumber
+        });
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body
+        })
+            .then(() => {alert("Success!"); resetFields()})
+            .catch(error => alert(error));
+        console.log(body);
+    };
 
     const [firstName, setFirstName] = React.useState<string>("");
     const [lastName, setLastName] = React.useState<string>("");
     const [netID, setNetID] = React.useState<string>("");
     const [email, setEmail] = React.useState<string>("");
     const [phoneNumber, setPhoneNumber] = React.useState<string>("");
+
+    const resetFields = () => {
+        setFirstName("");
+        setLastName("");
+        setNetID("");
+        setEmail("");
+        setPhoneNumber("");
+    };
 
     const inputProps = {margin: "normal"};
     return (
