@@ -157,6 +157,7 @@ export const About: React.FunctionComponent = (props) => {
                                 {...inputProps}
                                 label="Phone Number"
                                 required
+                                type="number"
                                 validators={['required','isNumber']}
                                 errorMessages={['This field is required',"Must be a valid phone number"]}
                                 value={phoneNumber}
