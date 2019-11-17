@@ -11,7 +11,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import Typography from "@material-ui/core/Typography";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 // @ts-ignore
-import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
+import {ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 
 const MainDiv = styled.div`
   @media(${props => props.theme.mediaQueries.horizontalLayout}) { // Stretch to full width on smaller devices
@@ -27,6 +27,19 @@ const MainDiv = styled.div`
   padding: 50px 40px;
   margin: 0; 
   background: #86cb79 linear-gradient(44deg, #86cb97, #a5dc86);
+`;
+
+const VerticalForm = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+const HorizontalFieldGroup = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  & * {margin-right: 10px;}
 `;
 
 
@@ -49,6 +62,7 @@ export const About: React.FunctionComponent = (props) => {
     const [email, setEmail] = React.useState<string>("");
     const [phoneNumber, setPhoneNumber] = React.useState<string>("");
 
+
     return (
         <MainDiv>
             <ExpansionPanel expanded={currentPanel === 'infoform'} onChange={handleChange('infoform')}>
@@ -57,31 +71,35 @@ export const About: React.FunctionComponent = (props) => {
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                     <ValidatorForm>
-                        <TextValidator
-                            label="First Name"
-                            value={firstName}
-                            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setFirstName(event.target.value)}
-                        />
-                        <TextValidator
-                            label="Last Name"
-                            value={lastName}
-                            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setLastName(event.target.value)}
-                        />
-                        <TextValidator
-                            label="Net ID"
-                            value={netID}
-                            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setNetID(event.target.value)}
-                        />
-                        <TextValidator
-                            label="Preferred Email"
-                            value={email}
-                            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
-                        />
-                        <TextValidator
-                            label="Phone Number"
-                            value={phoneNumber}
-                            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setPhoneNumber(event.target.value)}
-                        />
+                        <VerticalForm>
+                            <HorizontalFieldGroup>
+                                <TextValidator
+                                    label="First Name"
+                                    value={firstName}
+                                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => setFirstName(event.target.value)}
+                                />
+                                <TextValidator
+                                    label="Last Name"
+                                    value={lastName}
+                                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => setLastName(event.target.value)}
+                                />
+                            </HorizontalFieldGroup>
+                            <TextValidator
+                                label="Net ID"
+                                value={netID}
+                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setNetID(event.target.value)}
+                            />
+                            <TextValidator
+                                label="Preferred Email"
+                                value={email}
+                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
+                            />
+                            <TextValidator
+                                label="Phone Number"
+                                value={phoneNumber}
+                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setPhoneNumber(event.target.value)}
+                            />
+                        </VerticalForm>
                     </ValidatorForm>
                 </ExpansionPanelDetails>
             </ExpansionPanel>
