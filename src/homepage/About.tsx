@@ -114,6 +114,7 @@ export const About: React.FunctionComponent = (props) => {
                 <ExpansionPanelDetails>
                     <ValidatorForm onSubmit={onSubmit}>
                         <VerticalForm>
+                            <Typography variant="body1">Receive updates about upcoming events!</Typography>
                             <HorizontalFieldGroup>
                                 <TextValidator
                                     {...inputProps}
