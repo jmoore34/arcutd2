@@ -32,6 +32,15 @@
   </head>
   <body style="margin: 0; padding: 0">
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- Even though we have a separate stateful React form, we still need a static form that Netlify can preprocess-->
+    <form name="memberinfo" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="text" name="netID" />
+      <input type="email" name="email" />
+      <input type="text" name="phoneNumber" />
+    </form>
     <div id="root"></div>
     <!--
       This HTML file is a template.
