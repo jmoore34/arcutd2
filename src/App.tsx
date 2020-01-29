@@ -1,16 +1,30 @@
 import React from 'react';
 import {theme} from 'theme'
-import {ThemeProvider} from 'styled-components'
+import {ThemeProvider as StyledComponentsThemeProvider} from 'styled-components'
+import {createMuiTheme, ThemeProvider as MuiThemeProvider} from "@material-ui/core/styles"
 import {Home} from 'homepage/Home'
 import {Normalize} from "styled-normalize";
+import {green, purple} from "@material-ui/core/colors";
+
+const muiTheme = createMuiTheme({
+    palette: {
+        primary: {
+            main: '#43a047'
+        }, // green
+        secondary: purple
+    }
+});
+
 
 function App() {
   return (
       <>
         <Normalize />
-        <ThemeProvider theme={theme}>
-          <Home />
-        </ThemeProvider>
+        <StyledComponentsThemeProvider theme={theme}>
+            <MuiThemeProvider theme={muiTheme}>
+                <Home />
+            </MuiThemeProvider>
+        </StyledComponentsThemeProvider>
       </>
   );
 }
