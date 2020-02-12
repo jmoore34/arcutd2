@@ -11,14 +11,14 @@ export interface Event {
 
 export const events: Event[] = [
     {date: mdyDate(1,29,2020), time: "7PM", location: "SLC 2.203", name: "Dog Toy Making Social", description: ""},
-    {date: mdyDate(2,12,2020), time: "7PM", location: "RHS Kitchen", name: "Cooking Social!", description: "Note the room change!"},
+    {date: mdyDate(2,12,2020), time: "7PM", location: "RHW Kitchen", name: "Cooking Social!", description: "Note the room change!"},
     {date: mdyDate(2,26,2020), time: "7PM", location: "SLC 2.203", name: "Animal Testing Awareness", description: ""},
     {date: mdyDate(3,11,2020), time: "7PM", location: "SLC 2.203", name: "DIY Lip Balm", description: ""},
     {date: mdyDate(3,25,2020), time: "7PM", location: "SLC 2.203", name: "Short Film Night", description: ""},
     {date: mdyDate(4,8,2020), time: "7PM", location: "SLC 2.203", name: "Activism Workshop", description: ""},
     {date: mdyDate(4,16,2020), time: "10AM-4PM", location: "Plinth/SU Mall", name: "UTD Veg Fest", description: ""},
     {date: mdyDate(4,22,2020), time: "7PM", location: "TBA", name: "Cowspiracy Screening", description: ""},
-
+    {date: mdyDate(4,29,2020), time: "7PM", location: "SSA 12.471", name: "Zero Waste Vegan Potluck", description: ""},
 ];
 
 // 19F
