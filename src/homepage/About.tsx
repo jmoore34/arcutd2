@@ -3,8 +3,6 @@ import * as React from "react";
 import styled from "styled-components";
 import {EventList} from "./EventList";
 import {theme} from "../theme";
-import {returnStatement} from "@babel/types";
-import {string} from "prop-types";
 import {ExpansionPanel, Link} from "@material-ui/core";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'

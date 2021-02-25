@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import * as React from 'react'
-import {Event} from 'events'
 import {getShortDayName, getShortMonthName} from "../util/TimeUtil";
-import {events} from "../events";
+import {Event, events, oldEvents} from "../events";
 import {LI, Text} from '../components/typography';
 
 // Dims (lowers opacity) of contents on demand
@@ -47,9 +46,17 @@ const EventContainer = styled.ul`
 export class EventList extends React.Component<{},{}> {
     render() {
         return <EventContainer>
-            {events.map((event,  id)=>
-                <SingleEvent key={id} event={event}/>
-        )}
+            <Text>Current semester</Text>
+            <EventContainer>
+                {events.map((event,  id)=>
+                    <SingleEvent key={id} event={event}/>)}
+            </EventContainer>
+            <br />
+            <Text>Past semesters</Text>
+            <EventContainer>
+                {oldEvents.map((event,  id)=>
+                    <SingleEvent key={id} event={event}/>)}
+            </EventContainer>
         </EventContainer>
     }
 }

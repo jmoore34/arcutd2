@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Text = styled.span`
-  font-family: ${(props)=>props.theme.typography.fonts.body}
+  font-family: ${(props)=>props.theme.typography.fonts.body};
   font-size: ${(props)=>props.theme.typography.sizes.body};
 `;
 
